@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         gson = new Gson();
     }
 
+
+    // Triggered when GetData Button is pressed
     public void getData(View view){
         final String url = "https://jsonplaceholder.typicode.com/photos";
         this.getData(url);
@@ -78,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Album album = albums.get(position);
 
-                //Toast.makeText(this, album.getTitle(), Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), album.getTitle(), Toast.LENGTH_LONG).show();
             }
         });
     }
